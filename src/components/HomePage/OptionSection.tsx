@@ -12,6 +12,7 @@ const DUMMY_OPTIONS: {
     link: string;
 }[] = [
     {
+        image:"https://www.metoffice.gov.uk/binaries/content/gallery/metofficegovuk/hero-images/advice/maps-satellite-images/satellite-image-of-globe.jpg",
         name: "waghtzap",
         subTitle: "text and chat with your friends",
         posX: "left",
@@ -19,6 +20,7 @@ const DUMMY_OPTIONS: {
         link: "/social/chat/",
     },
     {
+        image:"https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg",
         name: "instugrem",
         subTitle: "post and watch what others do",
         posX: "left",
@@ -26,7 +28,7 @@ const DUMMY_OPTIONS: {
         link: "/social/instugrem/",
     },
     {
-        name: "meetings",
+        name: "meatings",
         subTitle: "chat with your friends or scedule a meeting and talk with them like in the phone",
         posX: "left",
         posY: "bottom",
@@ -50,12 +52,12 @@ const OptionSection = () => {
     const onNextOption = (amount:number) => {
         
         setCounter(current_counter => {
-            if ((pressed < DUMMY_OPTIONS.length -1 || amount > 0 ) && (pressed >0 || amount < 0))
+            if ((pressed < DUMMY_OPTIONS.length -2 || amount > 0 ) && (pressed >0 || amount < 0))
                 return current_counter + amount;
             return current_counter;
         });
         setPressed(current_pressed => {
-            if ((pressed < DUMMY_OPTIONS.length -1 || amount > 0)  && (pressed >0 || amount < 0)) {
+            if ((pressed < DUMMY_OPTIONS.length -2 || amount > 0)  && (pressed >0 || amount < 0)) {
 
                 return current_pressed + (amount <=0 ? 1: -1);
             }
@@ -74,7 +76,7 @@ const OptionSection = () => {
                 onClickTopic(opt.link)
             }} key={`option-${i}`}>
             <TopicItem
-                image=""
+                image={opt.image || ""}
                 textPositionX={opt.posX}
                 textPositionY={opt.posY}
                 title={opt.name}

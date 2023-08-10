@@ -19,5 +19,6 @@
 body {
   color: rgb(var(--foreground-rgb));
   background-color: black;
-  overflow: hidden;
+  overflow-x: hidden;
+  overflow-y: scroll;
 }

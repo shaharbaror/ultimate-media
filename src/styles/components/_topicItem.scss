@@ -1,4 +1,5 @@
 .topic-item {
+    cursor: pointer;
     height:100%;
     width:100%;
     border-radius: 15px;
@@ -6,6 +7,8 @@
     flex-direction: column;
     padding:50px;
     padding-bottom: 100px;
+    background-repeat: no-repeat;
+    background-size: cover;
     background-color: blueviolet;
 
     .topic-item-content {
