@@ -1,0 +1,22 @@
+.topic-item {
+    height:100%;
+    width:100%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    padding:50px;
+    padding-bottom: 100px;
+    background-color: blueviolet;
+
+    .topic-item-content {
+        color:white;
+        .title {
+            font-size: 30px;
+            font-weight: 800;
+        }
+        .sub-title {
+            font-size: 20px;
+            font-weight: 600;
+        }
+    }
+}
