@@ -54,3 +54,14 @@ export type UserType = {
     notifications?:[];
     posts?:NewPostProps[];
 }
+
+export type SideProfileProps = {
+    profilePicture: string | StaticImageData;
+    username: string;
+    firstName:string;
+
+    suggested?: {
+        username: string;
+        profilePicture: string | StaticImageData;
+    }[];
+}

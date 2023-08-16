@@ -1,11 +1,13 @@
 "use client"
 
-import Post from "@/components/SocialMediaPage/Post/Post";
+import Post from "@/components/SocialMediaPage/Body/Post/Post";
 import { Button } from "antd";
 import React from "react";
 import { useRouter } from "next/navigation";
 import ProfileBlock from "@/components/SocialMediaPage/UserData/ProfileBlock";
 import { UserType } from "@/types/LocalTypes";
+import SideProfiles from "@/components/SocialMediaPage/Body/MyProfile/SideProfiles";
+import defaultProfilePic from "../../../../public/default-profile-pic.png";
 
 const DUMMY_DATA: {user:UserType} = {
     user: {
@@ -49,11 +51,12 @@ const InstugremPage = () => {
                         </div>
                     </div>
                 </div>
-            <div className="body-inner">
-            
+            <div className="insta-body">
+                <div className="body-inner">
                 <Post/>
                 <Post/>
-
+                </div>
+                <SideProfiles username="Shaharbaror1" firstName="Shahar" profilePicture={defaultProfilePic}/>
             </div>
             </div>
         </div>
