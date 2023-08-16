@@ -1,15 +1,17 @@
 .instagram-user-data {
-    width:35%;
-    background-color: lightgray;
+    width:300px;
+    background-color: rgb(33, 33, 33);
 }
 
 .body-inner {
-    width:100%;
-
+    width:1000px;
+    height:calc(100vh - 60px);
     padding:10px 20px;
     display: grid;
     justify-content: center;
-
+    background-color: black;
+    overflow: hidden;
+    overflow-y: visible;
     
 
 }
