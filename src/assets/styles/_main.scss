@@ -1,0 +1,17 @@
+.container{
+    margin:auto;
+    &.large {
+        min-width: 70vw;
+        min-height:fit-content;
+    }
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .hide-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }

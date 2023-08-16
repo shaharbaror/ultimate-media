@@ -1,5 +1,5 @@
 import "./globals.css";
-import "@/styles/global.scss";
+import "@/assets/styles/global.scss";
 import { Inter } from "next/font/google";
 import { ApolloWrapper } from "@/lib/apollo-provider";
 
@@ -17,7 +17,7 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en">
-            <body className={inter.className}>
+            <body className={`${inter.className}`}>
                 <ApolloWrapper>{children}</ApolloWrapper>
             </body>
         </html>

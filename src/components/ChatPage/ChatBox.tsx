@@ -56,7 +56,7 @@ const ChatBox = () => {
 
     return <div className="chat-container">
     <div className="chat-profile-info"></div>
-    <div className="chat-inner">
+    <div className="chat-inner  hide-scrollbar">
         <div className="chat">
 
             <div className="friend-chat">

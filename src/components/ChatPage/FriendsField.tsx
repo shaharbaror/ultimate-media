@@ -62,7 +62,7 @@ const FriendsField = () => {
                     onChange={onChangeInputHandler}
                 />
             </div>
-            <div className="friends-recent">
+            <div className="friends-recent hide-scrollbar">
                {ShowFriends()}
             </div>
         </div>

@@ -2,6 +2,8 @@
 
 import { useState } from "react";
 import { Button, Input } from "antd";
+import Image from "next/image";
+import icons from "@/assets/svg/icons";
 
 const Reactions = () => {
     const [showComments, setShowComments] = useState<boolean>(false);
@@ -13,22 +15,30 @@ const Reactions = () => {
     };
 
     return <div>
-    <div className="post-reactions p-4 flex">
-        <div className="comments">
-            120 <button onClick={ToggleComments}>comments</button>
-        </div>
+        
+    <div className="post-reactions py-4 flex flex-col">
         <div className="reactions-wrapper  flex gap-5">
-            <div className="likes-wrapper">
-                556 <button>♡</button>
-            </div>
-            <div className="favorites-wrapper">
-                70 <button>F</button>
-            </div>
-            <div className="shares-wrapper">
-                15 <button>S</button>
-            </div>
+            <button className="likes" dangerouslySetInnerHTML={{__html:icons.heart}}>
+                
+            </button>
+            <button className="comment" dangerouslySetInnerHTML={{__html:icons.comment}}>
+                
+            </button><button className="share" dangerouslySetInnerHTML={{__html:icons.share}}>
+               
+            </button>
+            <button className="save" dangerouslySetInnerHTML={{__html:icons.save}}>
+                
+            </button>
         </div>
-    </div>
+        {/* <div className="comments">
+            120 <button onClick={ToggleComments}>comments</button>
+        </div> */}
+        
+    </div>  
+    <p className="post-content font-light mt-5">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
+        auctor, turpis vitae efficitur porta, turpis.
+    </p>
     { showComments &&
     <div className="comment-section flex pt-5 flex-col">
         <div className="comments pl-5 mb-5">

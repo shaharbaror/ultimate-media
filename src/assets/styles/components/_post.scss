@@ -1,7 +1,6 @@
 .post {
     max-width: 600px;
     padding: 25px;
-    gap:15px;
     
     .profile-wrapper {
         width:100%;
@@ -26,6 +25,11 @@
     .post-content {
         font-size: 15px;
         font-weight: 200;
+        width:100%;
+        height:auto;
+        .ins-home-post {
+            position:relative !important;
+        }
     }
 
     .post-reactions {
@@ -33,15 +37,21 @@
         width:100%;
         justify-content: space-between;
         .reactions-wrapper {
-            .likes-wrapper {
-                cursor: pointer;
-                color:red;
+            width: 100%;
+               
+            button {
+                width:25px;
+                height:25px;
+                svg {
+                    height:100%;
+                    width:100%;
+                }
+
+                &:last-child {
+                    margin-left: auto;
+                }
             }
             
-            .shares-wrapper {
-                cursor: pointer;
-                color: blue;
-            }
         }
     }
 

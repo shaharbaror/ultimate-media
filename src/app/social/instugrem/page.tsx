@@ -28,9 +28,8 @@ const InstugremPage = () => {
     }
 
     return <div>
-        <div className="m-auto w-[1248px] h-screen ">
-            <div className="social-media-header h-[60px] flex items-center"><Button size="large" ghost onClick={GoBack}>{"<"} Back</Button></div>
-            <div className="flex bg-white h-fit">
+        <div className="instagram-body-wrapper h-screen bg-white">
+            <div className="flex ">
                 <div className="instagram-user-data flex flex-col gap-6">
                         <ProfileBlock {...DUMMY_DATA.user}/>
                     <div>
@@ -50,7 +49,7 @@ const InstugremPage = () => {
                         </div>
                     </div>
                 </div>
-            <div className="body-inner bg-white h-fit">
+            <div className="body-inner">
             
                 <Post/>
                 <Post/>
