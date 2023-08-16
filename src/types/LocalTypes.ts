@@ -1,3 +1,5 @@
+import { StaticImageData } from "next/image";
+
 export type RickCompProps = {
     rick_name:string;
 }
@@ -35,4 +37,20 @@ export type NewPostProps = {
         upVotes: string | number;
         comments: string | number;
     }
+}
+
+export type FriendType = {
+    name: string;
+    profilePicture?: string | StaticImageData;
+    online?:boolean;
+    lastSeen?:number | string;
+}
+
+export type UserType = {
+    name: string;
+    profilePicture?: string | StaticImageData;
+
+    friends?: FriendType[];
+    notifications?:[];
+    posts?:NewPostProps[];
 }
