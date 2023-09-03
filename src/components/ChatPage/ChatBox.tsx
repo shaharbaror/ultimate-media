@@ -64,14 +64,13 @@ const ChatBox = () => {
                 </span>
                 hello world?
             </div>
-            <Divider className="chat-devider"/>
             {ShowMessages()}
             
         </div>
         
         <div className="new-message">
             <Button size="middle" shape="circle" style={{backgroundImage:"url(https://pbs.twimg.com/profile_images/1162710956218245120/L4b1guuv_400x400.jpg)", backgroundRepeat:"no-repeat",backgroundSize:"cover"}} ></Button>
-            <Input  className="w-3/5" size="large" value={message} onChange={(e) => {setMessage(e.target.value)}} onPressEnter={sendMessage}  />
+            <Input  className="w-[50%]" size="large" value={message} onChange={(e) => {setMessage(e.target.value)}} onPressEnter={sendMessage}  />
             {/* <Button size="large" onClick={sendMessage} ghost>Sand massage</Button> */}
         </div>
     </div>
