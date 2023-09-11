@@ -16,7 +16,7 @@ const Reactions = () => {
 
     return <div>
         
-    <div className="post-reactions py-4 flex flex-col">
+    <div className="post-reactions pt-4 gap-1 pb-1 flex flex-col">
         <div className="reactions-wrapper  flex gap-5">
             <button className="likes" dangerouslySetInnerHTML={{__html:icons.heart}}>
                 
@@ -30,15 +30,35 @@ const Reactions = () => {
                 
             </button>
         </div>
+        <div className="like-number font-semibold">
+            <span>
+            500,000 likes
+            </span>
+        </div>
         {/* <div className="comments">
             120 <button onClick={ToggleComments}>comments</button>
         </div> */}
         
-    </div>  
-    <p className="post-content font-light mt-5">
+    </div>
+    <div className="post-content">
+        <span className="font-bold">username </span>
+        been to paris
+    </div>
+    <div className="comments-bottom" >
+        <div className="view-comments">
+        view all 600 comments
+        </div>
+        <div className="add-comment">
+
+            <Input placeholder="Add Comment" bordered={false} />
+
+            
+        </div>
+        </div>
+    {/* <p className="post-content font-light mt-5">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam
         auctor, turpis vitae efficitur porta, turpis.
-    </p>
+    </p> */}
     { showComments &&
     <div className="comment-section flex pt-5 flex-col">
         <div className="comments pl-5 mb-5">

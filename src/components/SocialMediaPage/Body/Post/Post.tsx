@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 import EyalProfilePic from "../../../../../public/eyal-profile-pic.png";
-import { Button, Input } from "antd";
+import { Button, Divider, Input } from "antd";
 import Reactions from "./Reactions";
 import PostContent from "./PostContent";
 
@@ -14,6 +14,7 @@ const Post = () => {
             </div>
             <PostContent />
             <Reactions/>
+            <Divider/>
         </div>
     );
 };

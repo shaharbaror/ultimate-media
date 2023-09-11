@@ -30,7 +30,7 @@ const InstugremPage = () => {
     }
 
     return <div>
-        <div className="instagram-body-wrapper h-screen bg-white">
+        <div className="instagram-body-wrapper bg-white">
             <div className="flex ">
                 <div className="instagram-user-data flex flex-col gap-6">
                         <ProfileBlock {...DUMMY_DATA.user}/>
